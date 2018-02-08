@@ -41,5 +41,14 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSCameraUsageDescription</key>
+	<string>您还没有开启相机权限，开启之后才能正常拍摄您喜欢的照片和视频进行发布</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>您还没有开启麦克风权限，开启之后才能正常拍摄您喜欢的照片和视频进项发布</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>您还没有开启照片的读写和写入权限，开启之后才能将您喜欢的照片或视频导入进行分享  同时也可以将您录制的视频或照片保存到相册
+相机</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>您还没有开启照片的读写和写入权限，开启之后才能将您喜欢的照片或视频导入进行分享  同时也可以将您录制的视频或照片保存到相册</string>
 </dict>
 </plist>

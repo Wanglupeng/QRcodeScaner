@@ -14,6 +14,7 @@
 		238399B8202C29CD00192BE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 238399B6202C29CD00192BE8 /* LaunchScreen.storyboard */; };
 		238399C3202C29CD00192BE8 /* AVcaptureQRcodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238399C2202C29CD00192BE8 /* AVcaptureQRcodeTests.swift */; };
 		238399CE202C29CD00192BE8 /* AVcaptureQRcodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238399CD202C29CD00192BE8 /* AVcaptureQRcodeUITests.swift */; };
+		238399DC202C2A3000192BE8 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 238399DB202C2A3000192BE8 /* ScanViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		238399C9202C29CD00192BE8 /* AVcaptureQRcodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVcaptureQRcodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		238399CD202C29CD00192BE8 /* AVcaptureQRcodeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVcaptureQRcodeUITests.swift; sourceTree = "<group>"; };
 		238399CF202C29CD00192BE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		238399DB202C2A3000192BE8 /* ScanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				238399B4202C29CD00192BE8 /* Assets.xcassets */,
 				238399B6202C29CD00192BE8 /* LaunchScreen.storyboard */,
 				238399B9202C29CD00192BE8 /* Info.plist */,
+				238399DB202C2A3000192BE8 /* ScanViewController.swift */,
 			);
 			path = AVcaptureQRcode;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				238399B0202C29CD00192BE8 /* ViewController.swift in Sources */,
 				238399AE202C29CD00192BE8 /* AppDelegate.swift in Sources */,
+				238399DC202C2A3000192BE8 /* ScanViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -414,7 +418,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -427,6 +431,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U5N47RT6RX;
 				INFOPLIST_FILE = AVcaptureQRcode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aizhan.AVcaptureQRcode;
@@ -441,6 +446,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = U5N47RT6RX;
 				INFOPLIST_FILE = AVcaptureQRcode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aizhan.AVcaptureQRcode;

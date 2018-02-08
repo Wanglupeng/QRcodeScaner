@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XbO-9N-scG">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,81 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AVcaptureQRcode" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1XT-kZ-Eyu">
+                                <rect key="frame" x="172" y="318.5" width="31" height="30"/>
+                                <state key="normal" title="扫描"/>
+                                <connections>
+                                    <action selector="Btnclicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5rY-dr-U9c"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1XT-kZ-Eyu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gVa-sp-w0G"/>
+                            <constraint firstItem="1XT-kZ-Eyu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iU5-6M-Ew5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="RvG-FB-paL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="456.80000000000001" y="118.29085457271366"/>
+        </scene>
+        <!--Scan View Controller-->
+        <scene sceneID="0dx-fR-RHg">
+            <objects>
+                <viewController storyboardIdentifier="ScanViewController" id="HUV-V4-veu" customClass="ScanViewController" customModule="AVcaptureQRcode" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" restorationIdentifier="ScanViewController" id="tMP-cR-LMw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjP-54-opX">
+                                <rect key="frame" x="40" y="186" width="295" height="295"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hjP-54-opX" secondAttribute="height" multiplier="1:1" id="HdQ-DE-Lly"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hjP-54-opX" firstAttribute="centerX" secondItem="tMP-cR-LMw" secondAttribute="centerX" id="R5d-EE-vOY"/>
+                            <constraint firstItem="hjP-54-opX" firstAttribute="centerY" secondItem="tMP-cR-LMw" secondAttribute="centerY" id="T9a-Mf-lvN"/>
+                            <constraint firstItem="bql-8y-ihA" firstAttribute="trailing" secondItem="hjP-54-opX" secondAttribute="trailing" constant="40" id="UuF-aB-g9F"/>
+                            <constraint firstItem="hjP-54-opX" firstAttribute="leading" secondItem="bql-8y-ihA" secondAttribute="leading" constant="40" id="s91-LI-xin"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bql-8y-ihA"/>
+                    </view>
+                    <connections>
+                        <outlet property="centView" destination="hjP-54-opX" id="YC6-8w-9jy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tn4-Iu-wIT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1145" y="121"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="82j-8P-5Yn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XbO-9N-scG" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BPy-rE-awe">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="E4d-Dk-6oU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IEJ-5g-wMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-337" y="118"/>
         </scene>
     </scenes>
 </document>
